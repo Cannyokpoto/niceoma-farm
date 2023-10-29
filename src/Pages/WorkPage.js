@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from '../Components/FarmHeader';
-import Container from '../Components/FarmContainer';
 import Footer from '../Components/FarmFooter';
+import WorkContent from '../Components/WorkContent';
+import '../Components/Work.css';
 
-class HomePage extends React.Component {
-    render(){ return(
+function WorkPage(){
+    return(
         <div>
             <Header />
-            <Container />
+            <WorkContent />
             <Footer />
         </div>
     )
 }
-}
 
-export default HomePage;
+export default WorkPage;

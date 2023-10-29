@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins&family=Roboto:wght@300;400&family=Work+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 :root{
     --black: #598216;
     --light-color: #666;
     --orange: #ffa500;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    font-family: 'Playfair Display', serif;
 }
 
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,12 +31,23 @@ html{
 
 
 body{
+    font-family: 'Playfair Display', serif;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: #fafafa;
+    font-family: 'Playfair Display', serif;
+}
+
+.App{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -87,6 +99,16 @@ header{
     position: relative;
 }
 
+.navbar a.active{
+    padding: 5px;
+    background-color: white;
+    color: var(--black);
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+    border-radius: 4px;
+}
+
 .navbar a::after{
     background-color: white;
     content: "";
@@ -101,6 +123,7 @@ header{
     width: 100%;
     transition: all .5s;
 }
+
 
 .icons{
     height: 70%;
@@ -127,7 +150,153 @@ header form .fa-times{
 }
 
 
+.hero{
+    background-image: url("./images/b9c442d5-71bf-4831-b58b-3867b91ff1d9.jpg");
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}
 
+.hero::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.hero .hero-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.hero .hero-wrapper h1{
+    position: relative;
+    color: white;
+    font-size: 70px;
+    font-weight: 900;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.hero .hero-wrapper h1 span{
+    color: var( --black);
+}
+
+.hero .quote{
+    color: white;
+    background-color: var( --black);
+    border-radius: 20px;
+    position: relative;
+    top: 50px;
+    padding: 15px 20px 15px 20px;
+    z-index: 10;
+}
+
+.hero .quote:hover .fa-solid{
+    position: relative;
+    left: 10px;
+    color: white;
+}
+
+#chevron{
+    position: relative;
+    left: 7px;
+    color: #ccc0c0;
+}
+
+.anchor{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 120px;
+    z-index: 10;
+}
+
+.anchor i{
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    text-align: center;
+    animation: arrow infinite 3s linear;
+}
+
+.anchor i:hover{
+    color: var( --black);
+}
+
+@keyframes arrow{
+    20%, 50%, 80%, to{
+            transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-40px);
+    }
+    70%{
+        transform: translateY(-20%);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 95%;
+    height: 400px;
+    margin-top: 50px;
+    background-color: #eee;
+    padding: 20px 0 20px 0;
+    box-shadow: var(--box-shadow);
+}
+
+
+
+.intro-image{
+    width: 30%;
+    height: 100%;
+}
+
+.intro-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.mySelf{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.intro .mySelf h3{
+    color: var(--black);
+}
+
+.intro .mySelf p{
+    text-transform: none;
+}
 
 .main-container{
     width: 100%;
@@ -135,7 +304,7 @@ header form .fa-times{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -169,7 +338,6 @@ header form .fa-times{
     position: relative;
     width: 100%;
     height: 320px;
-    background: white;
 }
 
 .card{
@@ -178,12 +346,13 @@ header form .fa-times{
     height: 100%;
     transform-style: preserve-3d;
     transition: all 1s ease;
-    background: white;
+    background-color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
+
 
 .card:hover{
     transform: rotateY(180deg);
@@ -202,6 +371,7 @@ header form .fa-times{
     font-size: 17px;
     text-transform: uppercase;
     line-height: 1;
+    color: var(--black);
 }
 
 
@@ -240,10 +410,13 @@ header form .fa-times{
 }
 
 .who{
-    height: 90vh;
-    width: 90%;
+    height: 650px;
+    width: 100%;
     margin-top: 100px;
-    background: url("./images/ce7c2e4f-3350-47c9-9820-8faead0b2723.jpg");
+    background: url("./images/355165773_6279378492156890_7002578277124229696_n.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     box-shadow: var(--box-shadow);
 }
 
@@ -252,7 +425,7 @@ header form .fa-times{
     width: 550px;
     border: solid 10px var( --black);
     position: relative;
-    top: 100px;
+    top: 130px;
     left: 30px;
 }
 
@@ -336,7 +509,7 @@ header form .fa-times{
     justify-content: space-between;
     width: 70%;
     height: 100%;
-    background-color: #fafaff;
+    background-color: #eee;
     padding: 0 5px 0 5px;
     overflow: hidden;
     padding: 20px 0 0 20px;
@@ -372,6 +545,7 @@ header form .fa-times{
     text-transform: capitalize;
     position: relative;
     bottom: 20px;
+    color: var(--black);
 }
 
 .photos .row .det img{
@@ -522,6 +696,10 @@ footer .newsletter button:hover{
 .right p{
     font-size: 14px;
     color: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
 }
 
 .right p span{
@@ -559,13 +737,152 @@ footer .newsletter button:hover{
 
 
 
+
 @media screen and (max-width:500px) {
+
+    .hero{
+        background-image: url("./images/b9c442d5-71bf-4831-b58b-3867b91ff1d9.jpg");
+        background-size: contain;
+        background-position: center;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    .hero .hero-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .hero .hero-wrapper h1{
+        position: relative;
+        color: white;
+        font-size: 70px;
+        font-weight: 900;
+        background: rgba(0, 0, 0, 0);
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .hero .hero-wrapper h1 span{
+        color: var( --black);
+    }
+    
+    .hero .quote{
+        color: white;
+        background-color: var( --black);
+        border-radius: 20px;
+        position: relative;
+        top: 50px;
+        padding: 15px 20px 15px 20px;
+    }
+    
+    .hero .quote:hover .fa-solid{
+        position: relative;
+        left: 10px;
+        color: white;
+    }
+    
+    #chevron{
+        position: relative;
+        left: 7px;
+        color: #ccc0c0;
+    }
+    
+    .anchor{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: 120px;
+    }
+    
+    .anchor i{
+        color: white;
+        font-size: 50px;
+        border-radius: 50%;
+        text-align: center;
+        animation: arrow infinite 3s linear;
+    }
+    
+    .anchor i:hover{
+        color: var( --black);
+    }
+    
+    @keyframes arrow{
+        20%, 50%, 80%, to{
+                transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-40px);
+        }
+        70%{
+            transform: translateY(-20%);
+        }
+        90%{
+            transform: translateY(-4px);
+        }
+    }
+    
+    .intro{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: 95%;
+        height: 400px;
+        margin-top: 50px;
+        background-color: #eee;
+        padding: 20px 0 20px 0;
+        box-shadow: var(--box-shadow);
+    }
+    
+    
+    
+    .intro-image{
+        width: 30%;
+        height: 100%;
+    }
+    
+    .intro-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    
+    .mySelf{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .intro .mySelf h3{
+        color: var(--black);
+    }
+    
+    .intro .mySelf p{
+        text-transform: none;
+    }
+    
 
     body{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
     }
 
     header .icons{
@@ -665,6 +982,148 @@ footer .newsletter button:hover{
     }
 
 
+
+    .hero{
+        background-image: url("./images/b9c442d5-71bf-4831-b58b-3867b91ff1d9.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 100px;
+        background-repeat: no-repeat;
+    }
+    
+    .hero .hero-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        width: 100%;
+        background: transparent;
+    }
+    
+    .hero .hero-wrapper h1{
+        color: white;
+        font-size: 17px;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 20px;
+    }
+    
+    .hero .hero-wrapper h1 span{
+        color: var( --black);
+    }
+    
+    .hero .quote{
+        color: white;
+        background-color: var( --black);
+        border-radius: 20px;
+        position: relative;
+        top: 50px;
+        padding: 15px 20px 15px 20px;
+    }
+    
+    .hero .quote:hover .fa-solid{
+        position: relative;
+        left: 10px;
+    }
+    
+    #chevron{
+        position: relative;
+        left: 7px;
+        color: #ccc0c0;
+    }
+    
+    .anchor{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: 120px;
+    }
+    
+    .anchor i{
+        color: white;
+        font-size: 50px;
+        border-radius: 50%;
+        text-align: center;
+        animation: arrow infinite 3s linear;
+    }
+    
+    .anchor i:hover{
+        color: var( --black);
+    }
+    
+    @keyframes arrow{
+        20%, 50%, 80%, to{
+                transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-40px);
+        }
+        70%{
+            transform: translateY(-20%);
+        }
+        90%{
+            transform: translateY(-4px);
+        }
+    }
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 450px;
+    }
+    
+    
+    .intro-image{
+        width: 70%;
+        height: 50%;
+        position: relative;
+        top: 10px;
+    }
+    
+    .intro-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    
+    .mySelf{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 10px 0 10px;
+    }
+
+    .intro .mySelf h3{
+        text-align: center;
+        position: relative;
+        top: -20px;
+    }
+    
+
+    .intro .mySelf p{
+        text-transform: none;
+        text-align: left;
+        position: relative;
+        top: -20px;
+    }
+    
+
     .main-container{
         width: 100%;
         height: 100%;
@@ -693,12 +1152,98 @@ footer .newsletter button:hover{
     
     
     
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        height: 100%;
+        width: 90%;
+        background-color: #eee;
+        border-radius: 10px;
+    }
     
+    .wrapper{
+        position: relative;
+        width: 250px;
+        height: 320px;
+        background: transparent;
+    }
+    
+    .card{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .card:hover{
+        transform: rotateY(180deg);
+    }
+    
+    .front{
+        position: absolute;
+        width: 95%;
+        height: 70%;
+        backface-visibility: hidden;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .front h3{
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 10px;
+        color: var(--black);
+    }
+    
+    
+    .front img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background: var( --black);
+        color: transparent;
+        transform: rotateY(180deg);
+        z-index: 1000;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px var(--black);
+    }
+    
+    
+    .back p{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        color: white;
+        position: relative;
+        bottom: 20px;
+        text-align: left;
+        padding: 10px 10px 20px 10px;
+    }
+
     
     .who{
         height: 450px;
         width: 90%;
-        background: url("./images/ce7c2e4f-3350-47c9-9820-8faead0b2723.jpg");
+        background: url("./images/355165773_6279378492156890_7002578277124229696_n.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -725,6 +1270,7 @@ footer .newsletter button:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
     
     .who .text h1{
@@ -758,15 +1304,87 @@ footer .newsletter button:hover{
         text-transform: none;
         position: relative;
         top: -70px;
-        padding: 0 10px 0 10px;
         text-align: left;
+        padding: 0 10px 0 10px;
     }
     
     @keyframes text {
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
-   
+    
+    .projects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        height: 100%;
+        width: 90%;
+        margin-top: 70px;
+    }
+    
+    
+    .projects .text{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .projects .text h3{
+        text-transform: uppercase;
+    }
+    
+    .projects .text h3 span{
+        color: var(--black);
+        border-bottom: 5px solid var(--black);
+        text-transform: uppercase;
+    }
+    
+    .photos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 97%;
+        background-color: #fafaff;
+        padding: 20px 5px 0 5px;
+    }
+    
+    
+    .photos .row{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .photos .row .det{
+        width: 75%;
+        height: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    
+    .photos .row .det p{
+        width: 100%;
+        text-transform: capitalize;
+        position: relative;
+        bottom: 20px;
+        color: var(--black);
+    }
+    
+    .photos .row .det img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
     
     
     .main-container .why{

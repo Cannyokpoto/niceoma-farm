@@ -1,6 +1,6 @@
 import React from "react";
 import "./NoPage.css";
-import Header from '../Components/EnergyHeader';
+import Header from '../Components/FarmHeader';
 
 
 function NoPage(){

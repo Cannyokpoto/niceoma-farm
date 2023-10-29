@@ -1,7 +1,6 @@
 import React from 'react';
-import '../Components/About.css';
-import Header from '../Components/EnergyHeader';
-import Footer from '../Components/EnergyFooter';
+import Header from '../Components/FarmHeader';
+import Footer from '../Components/FarmFooter';
 import ServicesContent from '../Components/ServicesContent';
 import '../Components/Services.css';
 

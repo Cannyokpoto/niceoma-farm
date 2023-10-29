@@ -1,16 +1,17 @@
 import React from 'react';
-import { Header, Navbar, CurrentPage} from '../NextHeader';
-import { Container, reveal, leftAndRight } from '../NextContainer';
-import { Footer } from '../NextFooter';
+import Header from '../Components/FarmHeader';
+import Footer from '../Components/FarmFooter';
+import ContactContent from '../Components/ContactContent';
+import '../Components/Contact.css';
 
-function Contact(){
+function ContactPage(){
     return(
         <div>
             <Header />
-            <Container greater=">" />
+            <ContactContent />
             <Footer />
         </div>
     )
 }
 
-export default Contact;
+export default ContactPage;
