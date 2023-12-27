@@ -56,48 +56,48 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--black);
+    background-color: #eee;
     border-radius: 20px;
 }
 
 .contacts .myspan i{
-    color: var(--black);
-    font-size: 50px;
-    background-color: white;
+    color: white;
+    font-size: 35px;
+    background-color: var(--black);
     border-radius: 50%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .contacts .myspan .fa-chevron-down{
-    color: var(--black);
+    color: white;
     font-size: 25px;
-    background-color: white;
+    background-color: var(--black);
     border-radius: 50%;
     padding: 3px;
 }
 
 
 .contacts .myspan h3{
-    color: white;
+    color: var(--black);
 }
 
 .contacts .myspan hr{
-    background-color: white;
+    background-color: var(--black);
     height: 2px;
     width: 70%;
 }
 
 .contacts .myspan p{
-    color: white;
+    color: var(--black);
     font-size: 17px;
 }
 
 .contacts .myspan h5{
-    color: white;
+    color: var(--black);
 }
 
 .contacts .myspan a{
-    color: white;
+    color: var(--black);
     text-decoration: underline;
     width: 70%;
     display: flex;
@@ -132,7 +132,7 @@ body{
 
     header .icons .fa-bars{
         display: block;
-        color: #eee;
+        color: var(--black);
         cursor: pointer;
         font-size: 30px;
     }
