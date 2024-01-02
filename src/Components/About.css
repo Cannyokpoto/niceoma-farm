@@ -157,87 +157,6 @@ header form .fa-times{
 
 
 
-.container{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    box-shadow: var(--box-shadow);
-    width: 100%;
-}
-
-.wrapper{
-    position: relative;
-    width: 100%;
-    height: 320px;
-    background: white;
-}
-
-.card{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 1s ease;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.card:hover{
-    transform: rotateY(180deg);
-}
-
-.front{
-    position: absolute;
-    width: 95%;
-    height: 70%;
-    backface-visibility: hidden;
-    background-position: center;
-    background-size: cover;
-}
-
-.front h3{
-    font-size: 17px;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-
-.front img{
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.back{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: var( --black);
-    color: white;
-    transform: rotateY(180deg);
-    z-index: 1000;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px var(--black);
-}
-
-
-.back p{
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    color: white;
-    position: relative;
-    bottom: 20px;
-    text-align: left;
-    padding: 10px 10px 20px 10px;
-}
 
 .who{
     height: 90vh;
@@ -305,87 +224,7 @@ header form .fa-times{
     100% {opacity: 1;}
 }
 
-.projects{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    margin-top: 70px;
-}
 
-
-.projects .text{
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-
-.projects .text h3 span{
-    color: var(--black);
-    border-bottom: 10px solid var(--black);
-}
-
-.photos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 70%;
-    height: 100%;
-    background-color: #fafaff;
-    padding: 0 5px 0 5px;
-    overflow: hidden;
-    padding: 20px 0 0 20px;
-    box-shadow: var(--box-shadow);
-}
-
-
-.photos .row{
-    width: 100%;
-    height: 32%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    overflow: hidden;
-}
-
-.photos .row .det{
-    width: 32%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 1.5s;
-    border-radius: 10px;
-}
-
-
-
-.photos .row .det p{
-    width: 100%;
-    text-transform: capitalize;
-    position: relative;
-    bottom: 20px;
-}
-
-.photos .row .det img{
-    height: 95%;
-    width: 95%;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    overflow: hidden;
-    transition: all 1.3s;
-}
-
-.photos .row .det img:hover{
-    transform: scale(1.1);
-}
 
 
 .why{
@@ -665,39 +504,10 @@ footer .newsletter button:hover{
     }
 
 
-    .main-container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-    }
-    
-    .main-container h1{
-        position: relative;
-        color: black;
-        font-weight: 900;
-        font-size: 30px;
-    }
-    
-    .main-container h1 span{
-        color: var( --black);
-        border-bottom: 6px solid var( --black);
-    }
-    
-    .main-container p{
-        font-size: 20px;
-        padding: 0 20px 0 20px;
-    }
-    
-    
-    
-    
     
     .who{
         height: 450px;
-        width: 90%;
+        width: 90vw;
         background: url("./images/ce7c2e4f-3350-47c9-9820-8faead0b2723.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -773,7 +583,7 @@ footer .newsletter button:hover{
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: 90%;
+        width: 90vw;
         background-color: var( --black);
         border-radius: 10px;
     }
