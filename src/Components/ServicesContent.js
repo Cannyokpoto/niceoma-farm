@@ -1,7 +1,5 @@
 import React from 'react';
 import './Services.css';
-import PHOTOS from './images/index.js';
-import { useState, useEffect } from "react";
 import Data from './ServicesData';
 
 

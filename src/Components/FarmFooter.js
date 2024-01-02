@@ -66,13 +66,6 @@ class Footer extends React.Component{
                         
                     </div>
 
-                    <div className="newsletter reveal">
-                        <h3>Send Us A Message</h3>
-                        <form action="https://formsubmit.co/ifynweks@gmal.com" method="POST">
-                            <textarea name="Message" id="text" cols="30" rows="10" required></textarea>
-                            <button>Send Message</button>
-                        </form>
-                    </div>
                 </footer>
 
                 <div className="right">
